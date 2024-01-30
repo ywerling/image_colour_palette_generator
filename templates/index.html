@@ -4,8 +4,18 @@
     <meta charset="UTF-8">
     <title>Image colour palette generator</title>
     <link rel="stylesheet" type="text/css" href="static/styles.css">
+    {% from 'bootstrap5/form.html' import render_form %}
 </head>
 <body>
     <h1>Colour Palette Generator</h1>
+    <p>Welcome to this colour palette generator. Select an image and you will receive a list
+    of the colours most present in that image.</p>
+    <img src="static/img/DSC09140.JPG" height="400" width="640">
+    <div>
+    {% block content %}
+        {{ render_form(form, novalidate=True) }}
+    {% endblock %}
+    </div>
+
 </body>
 </html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image colour palette details</title>
+    <link rel="stylesheet" type="text/css" href="static/styles.css">
+</head>
+<body>
+    <h1>Here are the results:</h1>
+    <ul>
+    {% block content %}
+        {% for color in main_colors %}
+        <li>{{ color }}</li>
+      {% endfor %}
+    {% endblock %}
+</ul>
+</body>
+</html>
